@@ -220,6 +220,22 @@ typedef enum {
 }H323CallOutStatus;
 
 /*!
+ @brief MobileRTCH323ParingStatus An Enum which provide all of states for Paring H.323/SIP.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCH323ParingStatus) {
+    ///Success
+    MobileRTCH323ParingStatus_Success = 0,
+    ///Meeting Not Existed
+    MobileRTCH323ParingStatus_MeetingNotExisted,
+    ///No provilege
+    MobileRTCH323ParingStatus_PermissionDenied,
+    ///Paring Code Not Existed
+    MobileRTCH323ParingStatus_ParingcodeNotExisted,
+    ///Error
+    MobileRTCH323ParingStatus_Error,
+};
+
+/*!
  @brief MobileRTCComponentType An Enum which provide all of component types.
  */
 typedef enum {
@@ -456,4 +472,32 @@ typedef NS_ENUM(NSUInteger, MobileRTCWebinarPromoteorDepromoteError) {
     MobileRTCWebinarPromoteorDepromoteError_Webinar_Panelist_Capacity_Exceed                         = 3035,
     ///Chat with Panelist
     MobileRTCWebinarPromoteorDepromoteError_Not_Found_Wwbinar_Attendee                               = 3029,
+};
+
+/*!
+ @brief MobileRTCMeetingItemAudioType An Enum which provide audio type description in meeting item.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCMeetingItemAudioType) {
+    ///Unknown
+    MobileRTCMeetingItemAudioType_Unknown                    = 0,
+    ///Telephone Only
+    MobileRTCMeetingItemAudioType_TelephoneOnly              = 1,
+    ///Voip Only
+    MobileRTCMeetingItemAudioType_VoipOnly                   = 2,
+    ///Telephone And Voip
+    MobileRTCMeetingItemAudioType_TelephoneAndVoip           = 3,
+    ///3rd Party Audio
+    MobileRTCMeetingItemAudioType_3rdPartyAudio              = 4,
+};
+
+/*!
+ @brief MobileRTCMeetingItemRecordType An Enum which provide meeting record type description in meeting item.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCMeetingItemRecordType) {
+    ///Auto Record Disabled
+    MobileRTCMeetingItemRecordType_AutoRecordDisabled               = 0,
+    ///Local Record
+    MobileRTCMeetingItemRecordType_LocalRecord                      = 1,
+    ///Clound Record
+    MobileRTCMeetingItemRecordType_CloudRecord                      = 2,
 };
